@@ -1,38 +1,50 @@
 #include <iostream>
-#include <cmath>
-
-
-/*Svaki paran broj moze se prikazati kao suma dvaju prostih brojeva (tzv, Golbachovo pravilo)
-Razgraditi logiku programa koji ce najprije ucitati 2 pr broja n1 i n2. Ako je n1 > n2 zamijeniti
-n1 sa n2. Prikazati sve parne cifre u intervalu n1 do n2 kao sumu dvaju prostih bojeva.
-U glavnom programu samo unijeti navedena 2 pr broja i pozvati funkciju koja obavlja zadani posao.*/
+#include <windows.h>
+/*Unos pozitivnog rboja, pronalazi parne 
+cifre i mjenja ih sve s brojem 5. Dodatno 
+razlika unesenog broja i novog*/
 
 using namespace std;
-bool paranBroj(int);
+int zamjenaCifara(int);
+int main() {
+	int n;
+	do
+	{
+		cout << "Unesite pozitivan broj: " << endl;
+		cin >> n;
+	} while (n < 0);
 
-void main() {
+	cout << "-----------" << endl;
+	cout << "Vas broj sa zamjenom parnih cifri brojem 5 je: " << "\033[31m" << zamjenaCifara(n) << endl;
 
-	int n1;
-	int n2;
-	int temp = 1;
+	cout << "\033[37m";
 
-	do {
-		cout << "Unesite vrijednosti n1 i n2: " << endl;
-		cin >> n1 >> n2;
-	} while (n1 < 0 || n2 < 0);
+	system("pause");
 
-	if (n1 > n2) {
+}
 
-		n1 = temp;
-		n1 = n2;
-		temp = n2;
+int zamjenaCifara(int br) {
+
+	//123
+
+	int novi = 0, temp = 0, potencija = 0;
+	while (br > 0) {
+
+		temp = br % 10;
+		if (temp % 2 == 0) {
+
+			novi += 5 * pow(10, potencija);
+		}
+		else 
+		{
+		
+			novi += temp * pow(10, potencija);
+
+		}
+		br /= 10;
+		potencija++;
 	}
 
 
-	system("pause<null");
-}
-
-bool paranBroj(int br) {
-
-
+	return novi;
 }

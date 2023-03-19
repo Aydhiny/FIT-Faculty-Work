@@ -1,31 +1,17 @@
 #include <iostream>
-#include <cmath>
-
 
 using namespace std;
 
+int main() {
 
-void main() {
-
-	int rezultat = 1;
 	int n;
+	cout << "Ünesite vrijednost n: " << endl;
+	cin >> n;
 
-	do {
-		cout << "Unesite vrijednsot N: " << endl;
-		cin >> n;
-	} while (n < 0);
-
-	for (int i = 1; i <= n; i+= 2) {
-		if (n % 5 == 0) {
-
-			n = (pow(i * n, 1/ n));
-
-		}
-
+	if (n % 5 != 0 && n % 2 != 0) {
+		for (int i = 1; i <= n; i+=2) 
+			cout << n << endl;
+	
 	}
-
-	cout << "Geometrijska sredina svih neparnih brojeva je: " << n << endl;
-
-
-
+	return 0;
 }
