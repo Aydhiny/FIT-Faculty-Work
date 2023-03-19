@@ -67,7 +67,7 @@ int srednjaCifra(int br) {
 	}
 	else {
 
-		cout << "Jebem ti mater" << endl;
+		cout << "Not possible" << endl;
 		return 0;
 	}
 
