@@ -16,10 +16,10 @@ void main()
 	cin >> n;
 
 
-	cout << "Broj cifara ovog kurca je: " << brojCifara(n) << endl;
-	cout << "Zadnja cifra ovog kurca je: " << zadnjaCifra(n) << endl;
-	cout << "Prva cifra ovog kurca je: " << prvaCifra(n) << endl;
-	cout << "Srednja cifra ovog kurca je: " << srednjaCifra(n) << endl;
+	cout << "Broj cifara je: " << brojCifara(n) << endl;
+	cout << "Zadnja cifra je: " << zadnjaCifra(n) << endl;
+	cout << "Prva cifra je: " << prvaCifra(n) << endl;
+	cout << "Srednja cifra je: " << srednjaCifra(n) << endl;
 
 }
 
