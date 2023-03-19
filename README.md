@@ -1,2 +1,2 @@
 # C++ I-Semestar
-FIT C++ projekti sa prve godine drugog semestra.
+FIT C++ projekti sa prve godine prvog semestra.
