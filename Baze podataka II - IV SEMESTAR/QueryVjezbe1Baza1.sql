@@ -1,0 +1,20 @@
+CREATE DATABASE baza1
+GO
+USE baza1
+
+CREATE TABLE Studenti(
+	brojIndeksa NVARCHAR(10),
+	ime NVARCHAR(10),
+	prezime NVARCHAR(10)
+)
+ALTER TABLE Studenti 
+ADD email NVARCHAR(50) NOT NULL CONSTRAINT UQ_Student_email UNIQUE,
+telefon NVARCHAR(15)
+
+CREATE TABLE Fakulteti
+(
+	FakultetID INT CONSTRAINT PK_Fakulteti PRIMARY KEY IDENTITY(1,1),
+	Naziv NVARCHAR(50) 
+)
+ALTER TABLE Studenti  
+ADD FakultetID INT NOT NULL CONSTRAINT FK_Student_Fakultet FOREIGN KEY REFERENCES Fakulteti(FakultetID)
