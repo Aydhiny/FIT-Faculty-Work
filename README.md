@@ -5,8 +5,13 @@ showcases of mini projects and seminar works from the Faculty of Information tec
 
 Email me if you have any questions: [ ajdinmehmedovic18875@gmail.com ].
 
-Interesting coding ideas: https://github.com/practical-tutorials/project-based-learning?tab=readme-ov-file
+<h3> Interesting coding ideas: </h3>
+
+https://github.com/practical-tutorials/project-based-learning?tab=readme-ov-file
+
 
 https://github.com/The-Cool-Coders/Project-Ideas-And-Resources
 
 https://github.com/Ruth-ikegah/beginner-projects
+
+https://github.com/florinpop17/app-ideas?tab=readme-ov-file
