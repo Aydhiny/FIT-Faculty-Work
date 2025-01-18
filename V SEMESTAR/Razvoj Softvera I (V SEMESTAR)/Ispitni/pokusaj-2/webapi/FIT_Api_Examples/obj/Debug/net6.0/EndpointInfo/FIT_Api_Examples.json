@@ -1,0 +1,1168 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "FIT_Api_Examples",
+    "version": "1.0"
+  },
+  "paths": {
+    "/GetAkademske": {
+      "get": {
+        "tags": [
+          "AkademskeGodine"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Autentifikacija/Login": {
+      "post": {
+        "tags": [
+          "Autentifikacija"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginInformacije"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginInformacije"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginInformacije"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Autentifikacija/Logout": {
+      "post": {
+        "tags": [
+          "Autentifikacija"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Autentifikacija/Get": {
+      "get": {
+        "tags": [
+          "Autentifikacija"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AutentifikacijaToken"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AutentifikacijaToken"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AutentifikacijaToken"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Drzava/Add": {
+      "post": {
+        "tags": [
+          "Drzava"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DrzavaAddVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DrzavaAddVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DrzavaAddVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Drzava"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Drzava"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Drzava"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Drzava/GetAll": {
+      "get": {
+        "tags": [
+          "Drzava"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ispit/dodaj": {
+      "post": {
+        "tags": [
+          "IspitDodajEndpoint"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IspitDodajRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IspitDodajRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IspitDodajRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/IspitDodajResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IspitDodajResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IspitDodajResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ispit/obrisi": {
+      "delete": {
+        "tags": [
+          "IspitObrisiEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "IspitID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/IspitObrisiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IspitObrisiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IspitObrisiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Opstina/Add": {
+      "post": {
+        "tags": [
+          "Opstina"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OpstinaAddVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OpstinaAddVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OpstinaAddVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Opstina"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Opstina"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Opstina"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Opstina/GetByDrzava": {
+      "get": {
+        "tags": [
+          "Opstina"
+        ],
+        "parameters": [
+          {
+            "name": "drzava_id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GetOpstine": {
+      "get": {
+        "tags": [
+          "Opstina"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CmbStavke"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Student/GetAll": {
+      "get": {
+        "tags": [
+          "Student"
+        ],
+        "parameters": [
+          {
+            "name": "ime_prezime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Student"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Student"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Student"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/DodajStudenta": {
+      "post": {
+        "tags": [
+          "Student"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NoviStudentVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NoviStudentVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NoviStudentVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/ObrisiStudenta": {
+      "post": {
+        "tags": [
+          "Student"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/GetStudenta": {
+      "get": {
+        "tags": [
+          "Student"
+        ],
+        "parameters": [
+          {
+            "name": "studentid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Student"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Student"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Student"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TestniPodaci/Count": {
+      "get": {
+        "tags": [
+          "TestniPodaci"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/TestniPodaci/Generisi": {
+      "post": {
+        "tags": [
+          "TestniPodaci"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/GetUpisi": {
+      "get": {
+        "tags": [
+          "UpisGodina"
+        ],
+        "parameters": [
+          {
+            "name": "studentid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UpisGodina"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UpisGodina"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UpisGodina"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/DodajUpis": {
+      "post": {
+        "tags": [
+          "UpisGodina"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DodajUpisVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DodajUpisVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DodajUpisVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/OvjeriUpis": {
+      "post": {
+        "tags": [
+          "UpisGodina"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OvjeriUpisVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OvjeriUpisVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OvjeriUpisVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AkademskaGodina": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "opis": {
+            "type": "string",
+            "nullable": true
+          },
+          "evidentiraoKorisnik": {
+            "$ref": "#/components/schemas/KorisnickiNalog"
+          },
+          "datum_update": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "izmijenioKorisnik": {
+            "$ref": "#/components/schemas/KorisnickiNalog"
+          },
+          "datum_added": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AutentifikacijaToken": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vrijednost": {
+            "type": "string",
+            "nullable": true
+          },
+          "korisnickiNalogId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "korisnickiNalog": {
+            "$ref": "#/components/schemas/KorisnickiNalog"
+          },
+          "vrijemeEvidentiranja": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ipAdresa": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CmbStavke": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "opis": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DodajUpisVM": {
+        "type": "object",
+        "properties": {
+          "datumUpisa": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "godinaStudija": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cijenaSkolarine": {
+            "type": "number",
+            "format": "float"
+          },
+          "obnova": {
+            "type": "boolean"
+          },
+          "akademskaGodinaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "studentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evidentiraoId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Drzava": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "naziv": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DrzavaAddVM": {
+        "type": "object",
+        "properties": {
+          "opis": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IspitDodajRequest": {
+        "type": "object",
+        "properties": {
+          "predmetId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "komentar": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IspitDodajResponse": {
+        "type": "object",
+        "properties": {
+          "ispitId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IspitObrisiResponse": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "KorisnickiNalog": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "korisnickoIme": {
+            "type": "string",
+            "nullable": true
+          },
+          "slika_korisnika": {
+            "type": "string",
+            "nullable": true
+          },
+          "isNastavnik": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isStudent": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "isProdekan": {
+            "type": "boolean"
+          },
+          "isDekan": {
+            "type": "boolean"
+          },
+          "isStudentskaSluzba": {
+            "type": "boolean"
+          },
+          "defaultOpstinaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "defaultOpstina": {
+            "$ref": "#/components/schemas/Opstina"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginInformacije": {
+        "type": "object",
+        "properties": {
+          "autentifikacijaToken": {
+            "$ref": "#/components/schemas/AutentifikacijaToken"
+          },
+          "isLogiran": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginVM": {
+        "type": "object",
+        "properties": {
+          "korisnickoIme": {
+            "type": "string",
+            "nullable": true
+          },
+          "lozinka": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NoviStudentVM": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ime": {
+            "type": "string",
+            "nullable": true
+          },
+          "prezime": {
+            "type": "string",
+            "nullable": true
+          },
+          "opstina_rodjenja_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Opstina": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "drzava_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "drzava": {
+            "$ref": "#/components/schemas/Drzava"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OpstinaAddVM": {
+        "type": "object",
+        "properties": {
+          "opis": {
+            "type": "string",
+            "nullable": true
+          },
+          "drzava_id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OvjeriUpisVM": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "datumOvjere": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "napomena": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Student": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "korisnickoIme": {
+            "type": "string",
+            "nullable": true
+          },
+          "slika_korisnika": {
+            "type": "string",
+            "nullable": true
+          },
+          "isNastavnik": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isStudent": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "isProdekan": {
+            "type": "boolean"
+          },
+          "isDekan": {
+            "type": "boolean"
+          },
+          "isStudentskaSluzba": {
+            "type": "boolean"
+          },
+          "defaultOpstinaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "defaultOpstina": {
+            "$ref": "#/components/schemas/Opstina"
+          },
+          "ime": {
+            "type": "string",
+            "nullable": true
+          },
+          "prezime": {
+            "type": "string",
+            "nullable": true
+          },
+          "broj_indeksa": {
+            "type": "string",
+            "nullable": true
+          },
+          "opstina_rodjenja_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "opstina_rodjenja": {
+            "$ref": "#/components/schemas/Opstina"
+          },
+          "created_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "obrisan": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpisGodina": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "datumUpisa": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "godinaStudija": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cijenaSkolarine": {
+            "type": "number",
+            "format": "float"
+          },
+          "obnova": {
+            "type": "boolean"
+          },
+          "datumOvjere": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "napomena": {
+            "type": "string",
+            "nullable": true
+          },
+          "akademskaGodinaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "akademskaGodina": {
+            "$ref": "#/components/schemas/AkademskaGodina"
+          },
+          "studentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "student": {
+            "$ref": "#/components/schemas/Student"
+          },
+          "evidentiraoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evidentirao": {
+            "$ref": "#/components/schemas/KorisnickiNalog"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\User\\rs1\\termplates\\pokusaj-2\\webapi\\FIT_Api_Examples\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\User\\rs1\\termplates\\pokusaj-2\\webapi\\FIT_Api_Examples\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "E:\\User\\rs1\\termplates\\pokusaj-2\\webapi\\FIT_Api_Examples\\wwwroot\\profile_images\\8a6c995c-6ab8-4695-944d-8d35cc2e84a9.jpg",
+      "PackagePath": "staticwebassets\\profile_images\\8a6c995c-6ab8-4695-944d-8d35cc2e84a9.jpg"
+    },
+    {
+      "Id": "E:\\User\\rs1\\termplates\\pokusaj-2\\webapi\\FIT_Api_Examples\\wwwroot\\profile_images\\empty.png",
+      "PackagePath": "staticwebassets\\profile_images\\empty.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FIT_Api_Examples.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FIT_Api_Examples.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.FIT_Api_Examples.props",
+      "PackagePath": "build\\FIT_Api_Examples.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.FIT_Api_Examples.props",
+      "PackagePath": "buildMultiTargeting\\FIT_Api_Examples.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.FIT_Api_Examples.props",
+      "PackagePath": "buildTransitive\\FIT_Api_Examples.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

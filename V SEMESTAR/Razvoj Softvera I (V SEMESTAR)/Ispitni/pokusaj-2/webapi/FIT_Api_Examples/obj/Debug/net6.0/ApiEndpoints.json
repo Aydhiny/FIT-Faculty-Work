@@ -1,0 +1,410 @@
+[
+  {
+    "ContainingType": "FIT_Api_Examples.Modul0_Autentifikacija.Controllers.AutentifikacijaController",
+    "Method": "Get",
+    "RelativePath": "Autentifikacija/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "FIT_Api_Examples.Data.AutentifikacijaToken",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul0_Autentifikacija.Controllers.AutentifikacijaController",
+    "Method": "Login",
+    "RelativePath": "Autentifikacija/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "x",
+        "Type": "FIT_Api_Examples.Modul0_Autentifikacija.ViewModels.LoginVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FIT_Api_Examples.Helper.AutentifikacijaAutorizacija.MyAuthTokenExtension\u002BLoginInformacije",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul0_Autentifikacija.Controllers.AutentifikacijaController",
+    "Method": "Logout",
+    "RelativePath": "Autentifikacija/Logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.StudentController",
+    "Method": "DodajStudenta",
+    "RelativePath": "DodajStudenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "x",
+        "Type": "FIT_Api_Examples.Modul2.ViewModels.NoviStudentVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.UpisGodinaController",
+    "Method": "DodajUpis",
+    "RelativePath": "DodajUpis",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "x",
+        "Type": "FIT_Api_Examples.Modul2.ViewModels.DodajUpisVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.DrzavaController",
+    "Method": "Add",
+    "RelativePath": "Drzava/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "x",
+        "Type": "FIT_Api_Examples.Modul2.Controllers.DrzavaController\u002BDrzavaAddVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FIT_Api_Examples.Data.Drzava",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.DrzavaController",
+    "Method": "GetAll",
+    "RelativePath": "Drzava/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FIT_Api_Examples.Helper.CmbStavke, FIT_Api_Examples, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.AkademskeGodineController",
+    "Method": "GetAll_ForCmb",
+    "RelativePath": "GetAkademske",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FIT_Api_Examples.Helper.CmbStavke, FIT_Api_Examples, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.OpstinaController",
+    "Method": "GetByAll",
+    "RelativePath": "GetOpstine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FIT_Api_Examples.Helper.CmbStavke, FIT_Api_Examples, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.StudentController",
+    "Method": "GetStudenta",
+    "RelativePath": "GetStudenta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FIT_Api_Examples.Data.Student",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.UpisGodinaController",
+    "Method": "GetUpisi",
+    "RelativePath": "GetUpisi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FIT_Api_Examples.Data.UpisGodina, FIT_Api_Examples, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Example.Endpoints.IspitEndpoints.Dodaj.IspitDodajEndpoint",
+    "Method": "Obradi",
+    "RelativePath": "ispit/dodaj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FIT_Api_Example.Endpoints.IspitEndpoints.Dodaj.IspitDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FIT_Api_Example.Endpoints.IspitEndpoints.Dodaj.IspitDodajResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Example.Endpoints.IspitEndpoints.Obrisi.IspitObrisiEndpoint",
+    "Method": "Obradi",
+    "RelativePath": "ispit/obrisi",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IspitID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FIT_Api_Example.Endpoints.IspitEndpoints.Obrisi.IspitObrisiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.StudentController",
+    "Method": "ObrisiStudenta",
+    "RelativePath": "ObrisiStudenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.OpstinaController",
+    "Method": "Add",
+    "RelativePath": "Opstina/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "x",
+        "Type": "FIT_Api_Examples.Modul2.ViewModels.OpstinaAddVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FIT_Api_Examples.Data.Opstina",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.OpstinaController",
+    "Method": "GetByDrzava",
+    "RelativePath": "Opstina/GetByDrzava",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "drzava_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FIT_Api_Examples.Helper.CmbStavke, FIT_Api_Examples, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.UpisGodinaController",
+    "Method": "OvjeriUpis",
+    "RelativePath": "OvjeriUpis",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "x",
+        "Type": "FIT_Api_Examples.Modul2.ViewModels.OvjeriUpisVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul2.Controllers.StudentController",
+    "Method": "GetAll",
+    "RelativePath": "Student/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ime_prezime",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FIT_Api_Examples.Data.Student, FIT_Api_Examples, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul1_TestniPodaci.Controllers.TestniPodaciController",
+    "Method": "Count",
+    "RelativePath": "TestniPodaci/Count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FIT_Api_Examples.Modul1_TestniPodaci.Controllers.TestniPodaciController",
+    "Method": "Generisi",
+    "RelativePath": "TestniPodaci/Generisi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

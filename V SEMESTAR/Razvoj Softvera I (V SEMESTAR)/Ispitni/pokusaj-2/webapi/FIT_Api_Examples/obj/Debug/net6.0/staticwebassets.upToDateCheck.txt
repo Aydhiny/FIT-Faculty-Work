@@ -1,0 +1,4 @@
+wwwroot\favicon.ico
+wwwroot\index.html
+wwwroot\profile_images\8a6c995c-6ab8-4695-944d-8d35cc2e84a9.jpg
+wwwroot\profile_images\empty.png
