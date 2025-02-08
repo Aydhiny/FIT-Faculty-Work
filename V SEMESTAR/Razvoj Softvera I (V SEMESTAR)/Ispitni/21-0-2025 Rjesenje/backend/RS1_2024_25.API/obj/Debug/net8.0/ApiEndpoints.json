@@ -1,0 +1,603 @@
+[
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.AuthEndpoints.AuthGetEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "auth",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Endpoints.AuthEndpoints.AuthGetEndpoint\u002BAuthGetResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.AuthEndpoints.AuthLoginEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RS1_2024_25.API.Endpoints.AuthEndpoints.AuthLoginEndpoint\u002BLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Endpoints.AuthEndpoints.AuthLoginEndpoint\u002BLoginResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.AuthEndpoints.AuthLogoutEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Endpoints.AuthEndpoints.AuthLogoutEndpoint\u002BLogoutResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.ChatEndpoints.ChatUserGetEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "chat-users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchTerm",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Endpoints.ChatEndpoints.ChatUserGetEndpoint\u002BChatUserGetResponse[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.CityEndpoints.CityUpdateOrInsertEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "cities",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RS1_2024_25.API.Endpoints.CityEndpoints.CityUpdateOrInsertEndpoint\u002BCityUpdateOrInsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.CityEndpoints.CityDeleteEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "cities/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.CityEndpoints.CityGetByIdEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "cities/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Endpoints.CityEndpoints.CityGetByIdEndpoint\u002BCityGetByIdResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.CityEndpoints.CityGetAll1Endpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "cities/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Endpoints.CityEndpoints.CityGetAll1Endpoint\u002BCityGetAll1Response[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.CityEndpoints.CityGetAll3Endpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "cities/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Q",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Helper.MyPagedList\u00601[[RS1_2024_25.API.Endpoints.CityEndpoints.CityGetAll3Endpoint\u002BCityGetAll3Response, RS1_2024_25.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.CityEndpoints.CityLookupEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "cities/lookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RegionId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CountryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Endpoints.CityEndpoints.CityLookupEndpoint\u002BCityLookupResponse[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.CityEndpoints.CityGetAll2Endpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "cities/paged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Helper.MyPagedList\u00601[[RS1_2024_25.API.Endpoints.CityEndpoints.CityGetAll1Endpoint\u002BCityGetAll1Response, RS1_2024_25.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.LookupsEndpoints.CountryLookupEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "countries/lookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Endpoints.LookupsEndpoints.CountryLookupEndpoint\u002BCountryLookupResponse[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.DataSeedEndpoints.DataSeedGenerateEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "data-seed",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.DataSeed.FIT_Api_Example.Endpoints.DataSeedCountEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "data-seed",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.SemesterEndpoints.SemesterEndpoint",
+    "Method": "GetAkademske",
+    "RelativePath": "GetAkademske",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.SemesterEndpoints.SemesterEndpoint",
+    "Method": "IzvrsiOvjeru",
+    "RelativePath": "IzvrsiOvjeru",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "semestarId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.MunicipalityEndpoints.MunicipalityLookupEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "municipalities/lookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CountryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegionId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CityId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Endpoints.MunicipalityEndpoints.MunicipalityLookupEndpoint\u002BMunicipalityLookupResponse[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.LookupsEndpoints.RegionLookupEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "regions/lookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CountryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Endpoints.LookupsEndpoints.RegionLookupEndpoint\u002BRegionLookupResponse[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.SemesterEndpoints.SemesterEndpoint",
+    "Method": "GetAllSemestri",
+    "RelativePath": "semester/all/{studentid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.SemesterEndpoints.SemesterEndpoint",
+    "Method": "CreateSemestar",
+    "RelativePath": "semester/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "r",
+        "Type": "RS1_2024_25.API.Endpoints.SemesterEndpoints.SemesterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.StudentEndpoints.StudentUpdateOrInsertEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "students",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RS1_2024_25.API.Endpoints.StudentEndpoints.StudentUpdateOrInsertEndpoint\u002BStudentUpdateOrInsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.StudentEndpoints.StudentDeleteEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "students/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.StudentEndpoints.StudentGetByIdEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "students/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Endpoints.StudentEndpoints.StudentGetByIdEndpoint\u002BStudentGetByIdResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "StudentRestoreEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "students/{id}/restore",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RS1_2024_25.API.Endpoints.StudentEndpoints.StudentGetAllEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "students/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Q",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RS1_2024_25.API.Helper.MyPagedList\u00601[[RS1_2024_25.API.Endpoints.StudentEndpoints.StudentGetAllEndpoint\u002BStudentGetAllResponse, RS1_2024_25.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

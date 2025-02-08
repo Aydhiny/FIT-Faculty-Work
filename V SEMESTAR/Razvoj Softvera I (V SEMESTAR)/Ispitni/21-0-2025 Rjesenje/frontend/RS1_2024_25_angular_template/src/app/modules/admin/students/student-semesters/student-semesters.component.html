@@ -1,0 +1,60 @@
+<p>semester-semesters works!</p>
+
+<h1>{{ student.id }}</h1>
+<h1>{{ student.firstName }}</h1>
+<h1>{{ student.lastName }}</h1>
+
+<table [dataSource]="dataSource!" class="mat-elevation-z8" mat-table matSort>
+  <!-- First Name Column -->
+  <ng-container matColumnDef="red1">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+    <mat-cell *matCellDef="let semester">{{ semester.id }}</mat-cell>
+  </ng-container>
+
+  <!-- Last Name Column -->
+  <ng-container matColumnDef="red2">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Academic Year</mat-header-cell>
+    <mat-cell *matCellDef="let semester">{{ semester.akademskiOpis }}</mat-cell>
+  </ng-container>
+
+  <!-- semester Number Column -->
+  <ng-container matColumnDef="red3">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Year Of Study</mat-header-cell>
+    <mat-cell *matCellDef="let semester">{{ semester.godinaStudija }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="red4">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Renewal</mat-header-cell>
+    <mat-cell *matCellDef="let semester">{{ semester.obnova }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="red5">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Winter Semester</mat-header-cell>
+    <mat-cell *matCellDef="let semester">{{ semester.datumUpisa }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="red7">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Datum ovjere</mat-header-cell>
+    <mat-cell *matCellDef="let semester">{{ semester.datumOvjere }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="red6">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Recorded By</mat-header-cell>
+    <mat-cell *matCellDef="let semester">{{ semester.profesorIme }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="red8">
+    <mat-header-cell *matHeaderCellDef>Ovjeri</mat-header-cell>
+    <mat-cell *matCellDef="let semester">
+  <button (click)="ovjeriSemestar(semester.id)" color="warn" mat-button>
+    <mat-icon>description</mat-icon>
+    Ovjeri Ga
+  </button>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Table Header and Rows -->
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</table>
+<button (click)="PredjiNaNovi()">ENROLL IN WINTER SEMESTER</button>

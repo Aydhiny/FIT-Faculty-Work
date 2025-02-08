@@ -1,0 +1,1802 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "RS1_2024_25.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/auth": {
+      "get": {
+        "tags": [
+          "AuthGetEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthGetResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthGetResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthGetResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": [
+          "AuthLoginEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "tags": [
+          "AuthLogoutEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogoutResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogoutResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogoutResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/chat-users": {
+      "get": {
+        "tags": [
+          "ChatUserGetEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "UserType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SearchTerm",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChatUserGetResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChatUserGetResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChatUserGetResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities/{id}": {
+      "delete": {
+        "tags": [
+          "CityDeleteEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "CityGetByIdEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityGetByIdResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityGetByIdResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityGetByIdResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities/all": {
+      "get": {
+        "tags": [
+          "CityGetAll1Endpoint"
+        ],
+        "parameters": [
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CityGetAll1Response"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CityGetAll1Response"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CityGetAll1Response"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities/paged": {
+      "get": {
+        "tags": [
+          "CityGetAll2Endpoint"
+        ],
+        "parameters": [
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityGetAll1ResponseMyPagedList"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityGetAll1ResponseMyPagedList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityGetAll1ResponseMyPagedList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities/filter": {
+      "get": {
+        "tags": [
+          "CityGetAll3Endpoint"
+        ],
+        "parameters": [
+          {
+            "name": "Q",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityGetAll3ResponseMyPagedList"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityGetAll3ResponseMyPagedList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CityGetAll3ResponseMyPagedList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities/lookup": {
+      "get": {
+        "tags": [
+          "CityLookupEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "RegionId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "CountryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CityLookupResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CityLookupResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CityLookupResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities": {
+      "post": {
+        "tags": [
+          "CityUpdateOrInsertEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CityUpdateOrInsertRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CityUpdateOrInsertRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CityUpdateOrInsertRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/countries/lookup": {
+      "get": {
+        "tags": [
+          "CountryLookupEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CountryLookupResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CountryLookupResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CountryLookupResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data-seed": {
+      "get": {
+        "tags": [
+          "DataSeedCountEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "DataSeedGenerateEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/municipalities/lookup": {
+      "get": {
+        "tags": [
+          "MunicipalityLookupEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "CountryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "RegionId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "CityId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MunicipalityLookupResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MunicipalityLookupResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MunicipalityLookupResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/regions/lookup": {
+      "get": {
+        "tags": [
+          "RegionLookupEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "CountryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegionLookupResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegionLookupResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegionLookupResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/semester/all/{studentid}": {
+      "get": {
+        "tags": [
+          "SemesterEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "studentid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/semester/create": {
+      "post": {
+        "tags": [
+          "SemesterEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SemesterRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SemesterRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SemesterRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/GetAkademske": {
+      "get": {
+        "tags": [
+          "SemesterEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/IzvrsiOvjeru": {
+      "post": {
+        "tags": [
+          "SemesterEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "semestarId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/students/{id}": {
+      "delete": {
+        "tags": [
+          "StudentDeleteEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "StudentGetByIdEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudentGetByIdResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudentGetByIdResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudentGetByIdResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/students/filter": {
+      "get": {
+        "tags": [
+          "StudentGetAllEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "Q",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudentGetAllResponseMyPagedList"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudentGetAllResponseMyPagedList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudentGetAllResponseMyPagedList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/students/{id}/restore": {
+      "post": {
+        "tags": [
+          "StudentRestoreEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/students": {
+      "post": {
+        "tags": [
+          "StudentUpdateOrInsertEndpoint"
+        ],
+        "parameters": [
+          {
+            "name": "my-auth-token",
+            "in": "header",
+            "description": "upisati token preuzet iz autentikacijacontrollera"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudentUpdateOrInsertRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudentUpdateOrInsertRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudentUpdateOrInsertRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AuthGetResponse": {
+        "type": "object",
+        "properties": {
+          "myAuthInfo": {
+            "$ref": "#/components/schemas/MyAuthInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChatUserGetResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CityGetAll1Response": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "regionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CityGetAll1ResponseMyPagedList": {
+        "type": "object",
+        "properties": {
+          "dataItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CityGetAll1Response"
+            },
+            "nullable": true
+          },
+          "currentPage": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "hasPrevious": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "hasNext": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CityGetAll3Response": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "regionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CityGetAll3ResponseMyPagedList": {
+        "type": "object",
+        "properties": {
+          "dataItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CityGetAll3Response"
+            },
+            "nullable": true
+          },
+          "currentPage": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "hasPrevious": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "hasNext": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CityGetByIdResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "regionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "countryId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CityLookupResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "regionID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "countryName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CityUpdateOrInsertRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regionId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CountryLookupResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateOnly": {
+        "type": "object",
+        "properties": {
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "month": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "day": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dayOfWeek": {
+            "$ref": "#/components/schemas/DayOfWeek"
+          },
+          "dayOfYear": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "dayNumber": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DayOfWeek": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Gender": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "LoginRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "myAuthInfo": {
+            "$ref": "#/components/schemas/MyAuthInfo"
+          },
+          "token": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogoutResponse": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MunicipalityLookupResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "cityID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cityName": {
+            "type": "string",
+            "nullable": true
+          },
+          "regionID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "countryName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MyAuthInfo": {
+        "type": "object",
+        "properties": {
+          "tenantId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "isDean": {
+            "type": "boolean"
+          },
+          "isStudent": {
+            "type": "boolean"
+          },
+          "isProfessor": {
+            "type": "boolean"
+          },
+          "isLoggedIn": {
+            "type": "boolean"
+          },
+          "slikaPath": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegionLookupResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "countryName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SemesterRequest": {
+        "type": "object",
+        "properties": {
+          "studentid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "datumUpisa": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "godinaStudija": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "akademskaGodinaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cijenaSkolarine": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "obnova": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StudentGetAllResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "studentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "citizenship": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthMunicipality": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDeleted": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StudentGetAllResponseMyPagedList": {
+        "type": "object",
+        "properties": {
+          "dataItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StudentGetAllResponse"
+            },
+            "nullable": true
+          },
+          "currentPage": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "hasPrevious": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "hasNext": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StudentGetByIdResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "studentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "parentName": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "$ref": "#/components/schemas/DateOnly"
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "citizenshipId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "birthPlace": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthMunicipalityId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "permanentAddressStreet": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentMunicipalityId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "contactMobilePhone": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactPrivateEmail": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StudentUpdateOrInsertRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "parentName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "studentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "$ref": "#/components/schemas/DateOnly"
+          },
+          "gender": {
+            "$ref": "#/components/schemas/Gender"
+          },
+          "citizenshipId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "birthPlace": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthMunicipalityId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "permanentAddressStreet": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentMunicipalityId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "contactMobilePhone": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactPrivateEmail": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
